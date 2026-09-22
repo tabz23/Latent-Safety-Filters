@@ -1,0 +1,15 @@
+# data_root and output_root are CLI args of train_failure_classifier.py
+# (defaults: "datasets" and "checkpoints/classifier")
+freeze_wm: True
+# single_layer_classifier: False
+with_proprio: True
+latent_dim: 512 # will calculate automatically in the next update
+eval_freq: 100 # how often to evaluate the model during training
+lr: 1e-4
+weight_decay: 1e-5
+batch_size: 64
+# epochs: 5
+device: "cuda:0"
+seed: 0
+gradient_penalty: True
+gp_weight: 0.1

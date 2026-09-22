@@ -1,0 +1,3 @@
+# conf/encoder/vc1.yaml
+_target_: models.encoder.vc1.VC1Encoder
+vc1_trainable: false

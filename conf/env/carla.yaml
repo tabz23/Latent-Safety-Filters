@@ -1,0 +1,17 @@
+# conf/env/carla.yaml
+
+name: carla
+kwargs: {}
+
+dataset:
+  _target_: "datasets.carla_dset.load_carla_slice_train_val"
+  n_rollout: null  # Use null to load all trajectories
+  normalize_action: False
+  data_path: ${oc.env:DATASET_DIR}/carla_4k_v # Adjust to your dataset path
+  split_ratio: 0.9
+  transform:
+    _target_: "datasets.img_transforms.default_transform"
+    img_size: ${img_size}
+
+decoder_path: null
+num_workers: 16

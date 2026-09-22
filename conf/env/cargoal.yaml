@@ -1,0 +1,18 @@
+# conf/env/dubins.yaml
+
+name: cargoal
+args: []
+kwargs: {}
+
+dataset:
+  _target_: "datasets.cargoal_dset.load_cargoal_slice_train_val"
+  n_rollout: null  # Use null to load all trajectories
+  normalize_action: False
+  data_path: ${oc.env:DATASET_DIR}/cargoalnewshort # Adjust to your dataset path
+  split_ratio: 0.9
+  transform:
+    _target_: "datasets.img_transforms.default_transform"
+    img_size: ${img_size}
+
+decoder_path: null
+num_workers: 16

@@ -1,0 +1,4 @@
+# conf/encoder/resnet_scratch.yaml
+_target_: models.encoder.resnet.resnet18  
+pretrained: False   
+unit_norm: False
