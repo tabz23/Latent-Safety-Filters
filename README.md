@@ -36,7 +36,7 @@ env/                              # environment wrappers + dataset generation sc
 
 train_failure_classifier.py       # Part 2a: latent failure classifier (hinge loss + gradient penalty)
 train_HJ_dubinslatent_withfinetune_ddqn.py   # Part 2b: HJ filter, Dubins (DDQN)
-train_HJ_dubinslatent_withfinetune.py        # Part 2b: HJ filter, Dubins (DDPG)
+train_HJ_dubinslatent_withfinetune.py        # Part 2b: HJ filter, Dubins (DDPG) note that DDPG does not work well. Use DDQN instead for dubins.
 train_HJ_visual_ft.py                        # Part 2b: HJ filter, CarGoal (DDPG)
 train_HJ_mani_ft.py                          # Part 2b: HJ filter, ManiSkill (DDPG, uses latent h)
 train_HJ_dubinstruth{,_BRS}.py               # ground-truth-state Dubins baseline (needs PyHJ, see below)
