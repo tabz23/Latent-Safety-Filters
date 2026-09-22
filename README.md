@@ -135,14 +135,23 @@ classifier as its signed distance).
 
 ## Datasets
 
-Datasets are not hosted; generate them with the scripts in `env/`:
+Datasets are not hosted; collect them by running (from the repo root):
 
-| Env | Generation script | Default output |
-|---|---|---|
-| Dubins | `env/dubins/generate_dataset.py` | `datasets/dubins1800_continuous_cost` |
-| CarGoal | rollouts of the vendored Dreamer nominal policy on `env/cargoal/CarGoal.py` (data used in the paper was collected with the SafeDreamer pipeline) | `datasets/cargoalnewshort` |
-| ManiSkill | `env/maniskill/maniskill_generatedata.py` (and `..._classifier.py` for the classifier dataset with binary labels) | `datasets/maniskillnew`, `datasets/maniskill3000classif` |
-| CARLA | `env/carla/generate_dataset.py` (requires a CARLA simulator) | `datasets/carla` |
+```bash
+# Dubins: 1800 PID trajectories -> datasets/dubins1800_continuous_cost
+python env/dubins/generate_dataset.py
+
+# CarGoal: 2000 episodes with the vendored Dreamer nominal policy
+python env/cargoal/generate_dataset.py --num_episodes 2000 --output_dir datasets/cargoalnewshort
+
+# ManiSkill: 2000 episodes (world-model data) and 3000 episodes with binary
+# failure labels (failure-classifier data), using the PPO nominal policy
+python env/maniskill/maniskill_generatedata.py --num-episodes 2000 --output-dir datasets/maniskillnew
+python env/maniskill/maniskill_generatedata_classifier.py --num-episodes 3000 --output-dir datasets/maniskill3000classif
+
+# CARLA: 2000 trajectories (requires a running CARLA simulator, Town10)
+python env/carla/generate_dataset.py
+```
 
 Each dataset directory contains `states.pth`, `actions.pth`,
 `seq_lengths.pth`, `costs.pth` (lists of per-episode tensors) and
