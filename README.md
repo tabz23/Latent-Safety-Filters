@@ -3,10 +3,6 @@
 
 
 
-**Designing Latent Safety Filters using Pre-Trained Vision Models**<br>
-Ihab Tabbara\*, Yuxuan Yang\*, Ahmad Hamzeh, Maxwell Astafyev, Hussein Sibai<br>
-Washington University in St. Louis — [arXiv:2509.14758](https://arxiv.org/abs/2509.14758)
-Paper
 
 We systematically evaluate pre-trained vision models (PVRs) — DINOv2 (patch
 embeddings and CLS token), VC-1, R3M and ResNet-50 — as perception backbones
@@ -278,6 +274,12 @@ Built on [DINO-WM](https://github.com/gaoyuezhou/dino_wm) (NYU),
 [CARLA](https://carla.org/).
 
 ## Citation
+
+
+**Designing Latent Safety Filters using Pre-Trained Vision Models**<br>
+Ihab Tabbara\*, Yuxuan Yang\*, Ahmad Hamzeh, Maxwell Astafyev, Hussein Sibai<br>
+Washington University in St. Louis — [arXiv:2509.14758](https://arxiv.org/abs/2509.14758)
+Paper
 
 ```bibtex
 @article{tabbara2025latentsafety,
