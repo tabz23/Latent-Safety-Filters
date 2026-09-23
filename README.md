@@ -1,10 +1,12 @@
-# Latent Safety Filters with Pre-Trained Vision Models
+# Official Code for the Paper Designing Latent Safety Filters using Pre-Trained Vision Models
+# Webpage: https://trustworthyautonomy.github.io/LatentSafetyFilterWithPVRs/
 
-Official code for the paper
+
 
 **Designing Latent Safety Filters using Pre-Trained Vision Models**<br>
 Ihab Tabbara\*, Yuxuan Yang\*, Ahmad Hamzeh, Maxwell Astafyev, Hussein Sibai<br>
 Washington University in St. Louis — [arXiv:2509.14758](https://arxiv.org/abs/2509.14758)
+Paper
 
 We systematically evaluate pre-trained vision models (PVRs) — DINOv2 (patch
 embeddings and CLS token), VC-1, R3M and ResNet-50 — as perception backbones
